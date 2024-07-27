@@ -1,0 +1,8 @@
+[package]
+name = "rss-reader"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+    uuid = { version = "0.8.2", features = ["v4"] }
+    postgres = { version = "0.19.8" }
