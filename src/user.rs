@@ -1,5 +1,10 @@
+pub mod user_repository;
+
+use uuid::Uuid;
+
 #[derive(Debug)]
 pub struct User {
+    id: String,
     name: String,
     email: String,
 }
@@ -9,6 +14,7 @@ impl User {
         User {
             name: name.to_string(),
             email: email.to_string(),
+            id: Uuid::new_v4().to_string(),
         }
     }
 
@@ -18,5 +24,9 @@ impl User {
 
     pub fn email(&self) -> &str {
         &self.email
+    }
+
+    pub fn get_id(&self) -> &str {
+        &self.id
     }
 }

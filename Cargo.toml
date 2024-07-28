@@ -6,3 +6,4 @@ edition = "2021"
 [dependencies]
     uuid = { version = "0.8.2", features = ["v4"] }
     postgres = { version = "0.19.8" }
+    argon2 = { version = "0.5.3"}

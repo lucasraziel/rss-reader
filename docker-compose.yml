@@ -5,7 +5,9 @@ services:
     depends_on:
       db:
         condition: service_healthy
-
+    volumes:
+      - .:/usr/src/myapp
+    command: sh -c "cargo watch -x run"
   db:
     image: postgres:16.3
     healthcheck:
